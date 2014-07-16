@@ -38,7 +38,8 @@ CONFIG_RTL8192CU_REDEFINE_1X1 = n
 CONFIG_INTEL_WIDI = n
 CONFIG_WAKE_ON_WLAN = n
 
-CONFIG_PLATFORM_I386_PC = y
+CONFIG_PLATFORM_I386_PC = n
+CONFIG_PLATFORM_TI_DAVINCI = y
 CONFIG_PLATFORM_TI_AM3517 = n
 CONFIG_PLATFORM_ANDROID_X86 = n
 CONFIG_PLATFORM_JB_X86 = n
@@ -245,6 +246,13 @@ KVER  := $(shell uname -r)
 KSRC := /lib/modules/$(KVER)/build
 MODDESTDIR := /lib/modules/$(KVER)/kernel/drivers/net/wireless/
 INSTALL_PREFIX :=
+endif
+
+ifeq ($(CONFIG_PLATFORM_TI_DAVINCI), y)
+EXTRA_CFLAGS += -DCONFIG_LITTLE_ENDIAN
+CROSS_COMPILE := /opt/arm-2011.03/bin/arm-none-eabi-
+KSRC := $(shell pwd)/../../kernel
+ARCH := arm
 endif
 
 ifeq ($(CONFIG_PLATFORM_TI_AM3517), y)

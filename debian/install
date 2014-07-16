@@ -1,0 +1,2 @@
+blacklist-native-rtl8192.conf /etc/modprobe.d/
+8192cu-disable-power-management.conf /etc/modprobe.d/
