@@ -3,38 +3,18 @@ This is a port of Realtek's own 8192CU driver for USB WiFi devices on Ubuntu 13.
 Installation
 ============
 
-Ensure you have the necessary prerequisites installed:
-
-    sudo apt-get install linux-headers-generic build-essential dkms
-
-Clone this repository:
-
-    git clone https://github.com/pvaret/rtl8192cu-fixes.git
-
-Set it up as a DKMS module:
-
-    sudo dkms add ./rtl8192cu-fixes
-
-Build and install it:
-
-    sudo dkms install 8192cu/1.9
-
-Refresh the module list:
-
-    sudo depmod -a
-
-Ensure the native (and broken) kernel driver is blacklisted:
-
-    sudo cp ./rtl8192cu-fixes/blacklist-native-rtl8192.conf /etc/modprobe.d/
-
-And reboot. You're done.
+This package is include by linux-image-ev3dev. It should already be installed on ev3dev-jessie.
 
 Troubleshooting
 ===============
 
-There is a known issue with power management on some hardware. If your WiFi connection drops after a few minutes, install the following module setting file to disable power management in your WiFi interface:
+There is a known issue with power management on some hardware. If your WiFi connection drops after a few minutes, edit the following module setting file to disable power management in your WiFi interface:
 
-    sudo cp ./rtl8192cu-fixes/8192cu-disable-power-management.conf /etc/modprobe.d/
+    /etc/modprobe.d/8192cu-disable-power-management.conf
+
+And remove the comment from the following line:
+
+    options 8192cu rtw_power_mgnt=0 rtw_enusbss=0
 
 And then reboot.
 
