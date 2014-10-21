@@ -3,7 +3,7 @@ This is a port of Realtek's own 8192CU driver for USB WiFi devices on Ubuntu 13.
 Installation
 ============
 
-This package is include by linux-image-ev3dev. It should already be installed on ev3dev-jessie.
+This package is included by linux-image-ev3dev. It should already be installed on ev3dev-jessie.
 
 Troubleshooting
 ===============

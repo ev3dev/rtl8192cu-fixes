@@ -1,3 +1,10 @@
+rtl8192cu (4.0.2-9000.20131029-0ev3dev2) testing; urgency=medium
+
+  * Added rtl8192cu-modules-common package. Fixes dependency issues where
+    kerenel is not upgraded even when using apt-get dist-upgrade.
+
+ -- David Lechner <david@lechnology.com>  Mon, 20 Oct 2014 23:06:26 -0500
+
 rtl8192cu (4.0.2-9000.20131029-0ev3dev1) testing; urgency=medium
 
   * Package is now based on a fork patched for kernel > 3.9 from

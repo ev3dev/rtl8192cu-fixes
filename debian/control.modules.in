@@ -8,7 +8,7 @@ Standards-Version: 3.9.4
 Package: rtl8192cu-modules-_KVERS_
 Architecture: any
 Provides: rtl8192cu-modules
-Conflicts: rtl8192cu-modules
+Depends: rtl8192cu-modules-common
 Description: rtl8192cu series modules for Linux (kernel _KVERS_).
  This package contains the set of loadable kernel modules for wireless adapters
  that use the rtl8192cu chipset.
@@ -30,3 +30,9 @@ Description: rtl8192cu series modules for Linux (kernel _KVERS_).
  your own rtl8192cu-modules. The rtl8192cu-source package has been
  provided for use with the Debian's module-assistant or kernel-package
  utilities to produce a version of rtl8192cu-modules for your kernel.
+
+Package: rtl8192cu-modules-common
+Architecture: all
+Conflicts: rtl8192cu-modules (<< 4.0.2-9000.20131029-0ev3dev2)
+Description: rtl8192cu series modules for Linux.
+ This package contains the common configuration files for rtl8192cu-modules.
