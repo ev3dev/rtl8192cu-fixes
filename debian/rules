@@ -105,7 +105,8 @@ binary-modules:
 	dh_compress
 	dh_fixperms
 	dh_installdeb
-	dh_gencontrol -- -v$(VERSION)
+	dh_gencontrol -prtl8192cu-modules-common -- -v$(VERSION)+$(KVERS)
+	dh_gencontrol --remaining-packages -- -v$(VERSION)
 	dh_md5sums
 	dh_builddeb --destdir=$(DEB_DESTDIR)
 	dh_prep
