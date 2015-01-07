@@ -1,3 +1,9 @@
+rtl8192cu (4.0.2-9000.20131029-0ev3dev4) testing; urgency=medium
+
+  * Set dev_type to wlan.
+
+ -- David Lechner <david@lechnology.com>  Tue, 06 Jan 2015 18:27:53 -0600
+
 rtl8192cu (4.0.2-9000.20131029-0ev3dev3) testing; urgency=medium
 
   * Fix version conflict rtl8192cu-modules-common package when only kernel
