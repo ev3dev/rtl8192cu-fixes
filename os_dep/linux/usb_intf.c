@@ -70,6 +70,7 @@ static void rtw_dev_remove(struct usb_interface *pusb_intf);
 #define USB_VENDER_ID_REALTEK		0x0BDA
 
 /* DID_USB_v915_20121224 */
+
 #define RTL8192C_USB_IDS \
 	/*=== Realtek demoboard ===*/ \
 	{USB_DEVICE(USB_VENDER_ID_REALTEK, 0x8191)},/* Default ID */ \
@@ -139,6 +140,7 @@ static void rtw_dev_remove(struct usb_interface *pusb_intf);
 	{USB_DEVICE(0x2001, 0x3307)},/* D-Link - Cameo */ \
 	{USB_DEVICE(0x2001, 0x330A)},/* D-Link - Alpha */ \
 	{USB_DEVICE(0x2001, 0x3309)},/* D-Link - Alpha */ \
+	{USB_DEVICE(0x2001, 0x330D)},/* D-Link - DWA 131 */ \
 	{USB_DEVICE(0x0586, 0x341F)},/* Zyxel - Abocom */ \
 	{USB_DEVICE(0x7392, 0x7822)},/* Edimax - Edimax */ \
 	{USB_DEVICE(0x2019, 0xAB2B)},/* Planex - Abocom */ \
