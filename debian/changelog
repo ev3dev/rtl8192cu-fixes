@@ -1,3 +1,9 @@
+rtl8192cu (4.0.2-9000.20131029-0ev3dev5) testing; urgency=medium
+
+  * Add support for more devices (thanks @wladimirklein).
+
+ -- David Lechner <david@lechnology.com>  Sun, 22 Feb 2015 15:39:38 -0600
+
 rtl8192cu (4.0.2-9000.20131029-0ev3dev4) testing; urgency=medium
 
   * Set dev_type to wlan.
